@@ -1,0 +1,19 @@
+
+# build system ----
+build/
+
+# python ----
+venv/
+*.pyc
+__pycache__/
+.coverage
+.mypy_cache/
+.ipynb_checkpoints/
+
+# development tools
+.tags
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
