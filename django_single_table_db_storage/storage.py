@@ -28,7 +28,7 @@ class SingleTableDbFileStorage(Storage):
 
     def _save(self, name, content):
         is_public = True  # TODO: compute using settings and looking at name prefix.
-        database_file = SingleTableDbFile.objects.create(name=name, content=content.read(), is_public=True)
+        database_file = SingleTableDbFile.objects.create(name=name, content=content.read(), is_public=is_public)
         database_file.save()
         return database_file.name
 

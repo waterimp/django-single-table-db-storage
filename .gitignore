@@ -1,8 +1,8 @@
 
-# build system ----
+# build system
 build/
 
-# python ----
+# python
 venv/
 *.pyc
 __pycache__/
