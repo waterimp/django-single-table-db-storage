@@ -1,12 +1,13 @@
 from io import BytesIO
 
 from django.http import FileResponse
+from django.shortcuts import get_object_or_404
 
 from .models import SingleTableDbFile
 
 
 def view_storage_file(request, name):
-    database_file = SingleTableDbFile.objects.get(name=name, is_public=True)
+    database_file = get_object_or_404(SingleTableDbFile.objects.filter(name=name, is_public=True))
     # reported_filename = name.split('/')[-1]
 
     # may need to customize more if not intelligent enough.
