@@ -1,6 +1,7 @@
 
 # build system
 build/
+dist/
 
 # python
 venv/
