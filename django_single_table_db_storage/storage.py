@@ -28,8 +28,8 @@ class SingleTableDbFileStorage(Storage):
 
     def _save(self, name, content):
         is_public = False  # TODO: compute using settings and looking at name prefix.
-        if "DJANGO_SINGLE_TABLE_DEFAULT_PUBLIC" in settings:
-            is_public = settings["DJANGO_SINGLE_TABLE_DEFAULT_PUBLIC"] is True
+        if hasattr(settings, "DJANGO_SINGLE_TABLE_DEFAULT_PUBLIC"):
+            is_public = settings.DJANGO_SINGLE_TABLE_DEFAULT_PUBLIC is True
         _read = content.read()
         if type(_read) == str:
             _read = _read.encode()
