@@ -40,6 +40,14 @@ Also in your django settings file, set up the default storage. It is recommended
 DEFAULT_FILE_STORAGE = 'django_single_table_db_storage.storage.SingleTableDbFileStorage'
 ```
 
+In your django settings file, you should determine the default accesibility of the files that are uploaded.
+
+
+```python
+DJANGO_SINGLE_TABLE_DEFAULT_PUBLIC = True  # or set it to False. The default is False.
+
+```
+
 Mount the URLs where you want in your `urls.py` file.
 
 ```python
