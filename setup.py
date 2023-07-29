@@ -32,6 +32,7 @@ setup(
     scripts=[],
     install_requires=[
           'Django>=3.2',
+          'django-extensions>=3.2',
       ],
     python_requires=">=3.5",
 )

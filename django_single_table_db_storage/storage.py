@@ -27,8 +27,13 @@ class SingleTableDbFileStorage(Storage):
         return ContentFile(database_file.content)
 
     def _save(self, name, content):
-        is_public = True  # TODO: compute using settings and looking at name prefix.
-        database_file = SingleTableDbFile.objects.create(name=name, content=content.read(), is_public=is_public)
+        is_public = False  # TODO: compute using settings and looking at name prefix.
+        if hasattr(settings, "DJANGO_SINGLE_TABLE_DEFAULT_PUBLIC"):
+            is_public = settings.DJANGO_SINGLE_TABLE_DEFAULT_PUBLIC is True
+        _read = content.read()
+        if type(_read) == str:
+            _read = _read.encode()
+        database_file = SingleTableDbFile.objects.create(name=name, content=_read, is_public=is_public)
         database_file.save()
         return database_file.name
 
