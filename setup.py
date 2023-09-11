@@ -29,6 +29,7 @@ setup(
     packages=['django_single_table_db_storage'],
     package_dir={'django_single_table_db_storage': 'django_single_table_db_storage'},
     package_data={},
+    include_package_data=True,
     scripts=[],
     install_requires=[
           'Django>=3.2',
