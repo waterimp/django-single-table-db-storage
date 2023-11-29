@@ -1,6 +1,6 @@
 This Python package provides a Django storage implementation that uses a single database table.
 
-Django developers may find this package may be most helpful for use in their test and prototype environments.
+Django developers may find this package to be most helpful for use in their test and prototype environments.
 This package may also be useful in launching small-scale projects/environments quickly without needing additional infrastructure setup.
 
 **WARNING:** For production applications, please consider using a CDN instead of this package, as it is not a good practice to serve files from a database. Website performance will suffer! Please see the section "Alternatives" below for performant and scalable storage options.
