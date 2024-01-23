@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="django-single-table-db-storage",
-    version="0.1.2",
+    version="0.1.3",
     description="Provides a Django storage implementation that uses a single database table.",
     long_description=longdesc,
     long_description_content_type="text/markdown",
