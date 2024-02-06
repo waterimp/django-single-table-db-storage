@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="django-single-table-db-storage",
-    version="0.1.3",
+    version="0.1.4",
     description="Provides a Django storage implementation that uses a single database table.",
     long_description=longdesc,
     long_description_content_type="text/markdown",
@@ -26,14 +26,16 @@ setup(
         "Framework :: Django :: 3.2",
     ],
     keywords="django storage database",
-    packages=['django_single_table_db_storage', 'django_single_table_db_storage.migrations'],
-    package_dir={'django_single_table_db_storage': 'django_single_table_db_storage'},
+    packages=['django_single_table_db_storage',
+              'django_single_table_db_storage.migrations'],
+    package_dir={
+        'django_single_table_db_storage': 'django_single_table_db_storage'},
     package_data={},
     include_package_data=True,
     scripts=[],
     install_requires=[
-          'Django>=3.2',
-          'django-extensions>=3.2',
-      ],
+        'Django>=3.2',
+        'django-extensions>=3.2',
+    ],
     python_requires=">=3.5",
 )
